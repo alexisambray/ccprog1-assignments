@@ -1,20 +1,23 @@
 #include <stdio.h>
 
 float convertFtoC(float fahrenheit) {
-  /* write your code here */ }
+  return 5.0 / 9.0 * (fahrenheit - 32);
+}
 
-  /*write the return type here */ convertCtoK(/*write the parameters here*/) {
-    /* write your code here */ }
-  int main() {
-    float fahrenheit, celsius, kelvin;
+float convertCtoK(celsius) {
+  return celsius + 273;
+}
 
-    printf("Fahrenheit ");
-    scanf("%f", &fahrenheit);
+int main() {
+  float fahrenheit, celsius, kelvin;
 
-    celsius = convertFtoC(fahrenheit);
-    kelvin = /* call the function convertCtoK here */
-        printf("\nCelsius: %.2f\n", celsius);
-    printf("Kelvin: %.2f\n", kelvin);
+  printf("Fahrenheit: ");
+  scanf("%f", &fahrenheit);
 
-    return 0;
-  }
+  celsius = convertFtoC(fahrenheit);
+  kelvin = convertCtoK(celsius);
+  printf("\nCelsius: %.2f\n", celsius);
+  printf("Kelvin: %.2f\n", kelvin);
+
+  return 0;
+}
