@@ -1,26 +1,26 @@
 #include <stdio.h>
 
-float convertFahrToCelsius(const float fahrenheit);
-float convertCelsiusToKelvin(const float celsius);
+double convertFahrToCelsius(const double fahrenheit);
+double convertCelsiusToKelvin(const double celsius);
 
 int main() {
-  float fahrenheit, celsius, kelvin;
+  double fahrenheit, celsius;
 
   printf("Fahrenheit: ");
-  scanf("%f", &fahrenheit);
+  scanf(" %lf", &fahrenheit);
 
   celsius = convertFahrToCelsius(fahrenheit);
-  kelvin = convertCelsiusToKelvin(celsius);
-  printf("\nCelsius: %.2f\n", celsius);
-  printf("Kelvin: %.2f\n", kelvin);
+
+  printf("\nCelsius: %.2lf\n", celsius);
+  printf("Kelvin: %.2lf\n", convertCelsiusToKelvin(celsius));
 
   return 0;
 }
 
-float convertFahrToCelsius(const float fahrenheit) {
+double convertFahrToCelsius(const double fahrenheit) {
   return 5.0 / 9.0 * (fahrenheit - 32);
 }
 
-float convertCelsiusToKelvin(const float celsius) {
+double convertCelsiusToKelvin(const double celsius) {
   return celsius + 273;
 }
