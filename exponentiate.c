@@ -17,14 +17,17 @@ int getInteger(char prompt[20]) {
   return integer;
 }
 
+void displayResult(int base, int exponent, int result) {
+  printf("%d raised to %d is %d.\n", base, exponent, result);
+}
+
 int main() {
   int base, exponent;
 
   base = getInteger("Input an integer: ");
   exponent = getInteger("Input exponent: ");
 
-  printf("%d raised to %d is %d.\n", base, exponent,
-         exponentiate(base, exponent));
+  displayResult(base, exponent, exponentiate(base, exponent));
 
   return 0;
 }
