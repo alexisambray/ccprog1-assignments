@@ -9,14 +9,19 @@ int exponentiate(int base, int exponent) {
   return result;
 }
 
+int getInteger(char prompt[20]) {
+  int integer;
+  printf("%s", prompt);
+  scanf("%d", &integer);
+
+  return integer;
+}
+
 int main() {
   int base, exponent;
 
-  printf("Input an integer: ");
-  scanf("%d", &base);
-
-  printf("Input exponent: ");
-  scanf("%d", &exponent);
+  base = getInteger("Input an integer: ");
+  exponent = getInteger("Input exponent: ");
 
   printf("%d raised to %d is %d.\n", base, exponent,
          exponentiate(base, exponent));
